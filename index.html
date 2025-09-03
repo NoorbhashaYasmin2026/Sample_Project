@@ -3,18 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>🌱 Mood Garden</title>
+  <title>🌱 Emoji Mood Garden</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>🌸 Mood Garden 🌸</h1>
-  <p>Select your mood and watch your garden grow!</p>
+  <h1>🌸 Emoji Mood Garden 🌸</h1>
+  <p>Select your mood and watch your emoji garden grow!</p>
 
   <div class="buttons">
-    <button onclick="plantFlower('happy')">😊 Happy</button>
-    <button onclick="plantFlower('sad')">😢 Sad</button>
-    <button onclick="plantFlower('angry')">😡 Angry</button>
-    <button onclick="plantFlower('calm')">😌 Calm</button>
+    <button onclick="plantEmoji('😊')">😊 Happy</button>
+    <button onclick="plantEmoji('😢')">😢 Sad</button>
+    <button onclick="plantEmoji('😡')">😡 Angry</button>
+    <button onclick="plantEmoji('😌')">😌 Calm</button>
+    <button onclick="resetGarden()" class="reset">🗑 Reset Garden</button>
   </div>
 
   <div id="garden"></div>
