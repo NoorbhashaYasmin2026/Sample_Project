@@ -1,34 +1,18 @@
 const garden = document.getElementById("garden");
 
-function plantFlower(mood) {
-  const x = Math.random() * (garden.offsetWidth - 60);
-  const y = Math.random() * (garden.offsetHeight - 60);
+function plantEmoji(symbol) {
+  const x = Math.random() * (garden.offsetWidth - 50);
+  const y = Math.random() * (garden.offsetHeight - 50);
 
-  createFlower(mood, x, y);
-}
+  const emoji = document.createElement("div");
+  emoji.classList.add("emoji");
+  emoji.textContent = symbol;
+  emoji.style.left = `${x}px`;
+  emoji.style.top = `${y}px`;
 
-function createFlower(mood, x, y) {
-  const flower = document.createElement("div");
-  flower.classList.add("flower", mood);
-  flower.style.left = `${x}px`;
-  flower.style.top = `${y}px`;
-
-  // Add petals
-  for (let i = 0; i < 6; i++) {
-    const petal = document.createElement("div");
-    petal.classList.add("petal");
-    petal.style.transform = `rotate(${i * 60}deg) translateY(-15px)`;
-    flower.appendChild(petal);
-  }
-
-  // Add center
-  const center = document.createElement("div");
-  center.classList.add("center");
-  flower.appendChild(center);
-
-  garden.appendChild(flower);
+  garden.appendChild(emoji);
 }
 
 function resetGarden() {
-  garden.innerHTML = ""; // clear flowers visually
+  garden.innerHTML = ""; // clears all emojis
 }
